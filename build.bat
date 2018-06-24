@@ -5,7 +5,7 @@ set exe_name=omega.exe
 
 :: Debug = 0, Release = 1
 set release_mode=0
-set compiler_flags= -nologo -Oi -TC -Gm- -MP -FC -GS- -EHsc- -GR-
+set compiler_flags= -nologo -Oi -TC -Gm- -MP -FC -GS- -EHsc- -GR- -D_CRT_SECURE_NO_WARNINGS
 
 if %release_mode% EQU 0 ( rem Debug
 	set compiler_flags=%compiler_flags% -Od -MDd -Z7
