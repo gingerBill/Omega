@@ -129,10 +129,10 @@ void asm_proc_end(void) {
 void write_asm(void) {
 	asm_proc_start("WinMain");
 	asm_printf("sub rsp, 28h");
-	asm_printf("mov rcx, 0");
-	asm_printf("lea rdx, [msg]");
-	asm_printf("lea r8, [title]");
-	asm_printf("mov r9d, 0");
+	asm_printf("mov rcx, 0");       // HWND_DESKTOP
+	asm_printf("lea rdx, [msg]");   // lpText
+	asm_printf("lea r8, [title]");  // lpCaption
+	asm_printf("mov r9d, 0");       // MB_OK
 	asm_printf("call MessageBoxA");
 	asm_printf("add rsp, 28h");
 
