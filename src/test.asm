@@ -1,6 +1,7 @@
+section .text
+
 extern ExitProcess
 
-section .text
 global _start
 global mainCRTStartup
 
@@ -10,6 +11,7 @@ _start:
 	call mainCRTStartup
 	mov rcx, rax
 	call ExitProcess
+
 
 mainCRTStartup:
 	ret

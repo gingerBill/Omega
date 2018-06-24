@@ -43,7 +43,7 @@ del *.ilk > NUL 2> NUL
 
 cl %compiler_settings% "src\main.c" ^
 	/link %linker_settings% -OUT:%exe_name% ^
-	&& omega
+	&& omega && foo
 
 del *.obj > NUL 2> NUL
 
